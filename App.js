@@ -11,6 +11,7 @@ class App extends Component {
         <Text>Hola</Text>
         <Button title="BUTTON" />
         <Divider style={{ backgroundColor: 'blue' }} />
+        <Divider style={{ backgroundColor: 'blue' }} />
       </Home>
     );
   }
