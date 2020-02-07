@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
-import { Button } from 'react-native-elements';
+import {Button} from 'react-native-elements';
 class App extends Component {
   render() {
-    return(
+    return (
       <Home>
         <Header />
-        <Text>Hola</Text> 
-        <Button 
-        title='BUTTON' />
+        <Text>Hola</Text>
+        <Button title="BUTTON" />
+        <Divider style={{ backgroundColor: 'blue' }} />
       </Home>
     );
   }
