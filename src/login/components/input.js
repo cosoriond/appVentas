@@ -4,11 +4,11 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 function Input(props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Label</Text>
+      <Text style={styles.label}>{props.label}</Text>
       <TextInput
         style={styles.input}
         autoCorrect={false}
-        // onChangeText={props.onChangeText}
+        onChangeText={props.onChangeText}
         placeholder={props.placeholder}
         secureTextEntry={props.secureTextEntry}
         value={props.value}
