@@ -4,7 +4,6 @@ import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
 import {Button} from 'react-native-elements';
 import LoginForm from './src/login/components/loginForm';
-import Article from './src/login/components/article';
 class App extends Component {
   state = {
     loggerIn: true
@@ -15,7 +14,7 @@ class App extends Component {
       case true:
         return <LoginForm />;
       case false:
-        return <Article />;
+        return <Text>Contenido</Text>
     }
   };
   render() {

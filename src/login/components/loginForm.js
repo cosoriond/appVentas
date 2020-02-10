@@ -1,10 +1,14 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-
+import Input from '../../screens/components/input';
 function LoginForm() {
   return (
     <View style={styles.container}>
       <Text>Login Form</Text>
+      <Input 
+        placeholder="Ingresa tu Email"
+        value=""  
+      />
     </View>
   );
 }
