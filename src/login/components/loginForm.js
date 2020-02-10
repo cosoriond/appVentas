@@ -1,24 +1,29 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Input from '../../screens/components/input';
+import Button from '../../screens/components/button';
 function LoginForm() {
   return (
-    <View style={styles.container}>
+    <View style={styles.form}>
       <Text>Login Form</Text>
       <Input 
         placeholder="Ingresa tu Email"
-        value=""  
+        value="Email"  
       />
+      <Input 
+        placeholder="Ingresa tu contraseña"
+        value="Password"
+        secureTextEntry  
+      />
+      <Button>Log In</Button>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  form: {
+    flex: 1
+  }
 });
 
 export default LoginForm;

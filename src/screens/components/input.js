@@ -10,7 +10,7 @@ function Input(props) {
         autoCorrect={false}
         // onChangeText={props.onChangeText}
         placeholder={props.placeholder}
-        // secureTextEntry={props.secureTextEntry}
+        secureTextEntry={props.secureTextEntry}
         value={props.value}
       />
     </View>
