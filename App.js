@@ -1,26 +1,38 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
 import {Button} from 'react-native-elements';
+import LoginForm from './src/login/components/loginForm';
+import Article from './src/login/components/article';
 class App extends Component {
+  state = {
+    loggerIn: true
+  };
+
+  renderContent = () => { 
+    switch (this.state.loggerIn) {
+      case true:
+        return <LoginForm />;
+      case false:
+        return <Article />;
+    }
+  };
   render() {
     return (
-      <Home>
-        <Header />
-        <Text>Hola</Text>
-        <Button title="BUTTON" />
-        <Divider style={{ backgroundColor: 'blue' }} />
-        <Divider style={{ backgroundColor: 'blue' }} />
-      </Home>
+      <View style={styles.container}>
+        {this.renderContent()}
+      </View>
     );
   }
 }
 
-// const AppNavigator = createStackNavigaion({
-//     Home: App
-// });
-
-// const AppContainer = createAppContainer(AppNavigator);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default App;
