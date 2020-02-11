@@ -1,28 +1,22 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
-import Home from './src/screens/containers/home';
-import Header from './src/sections/components/header';
-import {Button} from 'react-native-elements';
 import LoginForm from './src/login/components/loginForm';
+import Article from './src/login/components/article';
 class App extends Component {
   state = {
-    loggerIn: true
+    loggerIn: true,
   };
 
-  renderContent = () => { 
+  renderContent = () => {
     switch (this.state.loggerIn) {
       case true:
         return <LoginForm />;
       case false:
-        return <Text>Contenido</Text>
+        return <Article />;
     }
   };
   render() {
-    return (
-      <View style={styles.container}>
-        {this.renderContent()}
-      </View>
-    );
+    return <View style={styles.container}>{this.renderContent()}</View>;
   }
 }
 

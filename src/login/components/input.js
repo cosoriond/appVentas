@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   label: {
     padding: 5,
     paddingBottom: 0,
-    color: '#333',
+    color: 'white',
     fontSize: 17,
     fontWeight: '700',
     width: '100%',

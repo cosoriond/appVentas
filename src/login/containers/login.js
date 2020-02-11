@@ -4,10 +4,10 @@ import Input from '../components/input';
 import Button from '../components/button';
 
 class Login extends Component {
-    onPress = () => console.log("Press Me!");
+  onPress = () => console.log('Press Me!');
   render() {
     return (
-      <View>
+      <View style={styles.form}>
         <Input label="Email" placeholder="Ingresa tu Email" />
         <Input
           label="Contraseña"
