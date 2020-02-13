@@ -8,10 +8,11 @@ function Input(props) {
       <TextInput
         style={styles.input}
         autoCorrect={false}
-        onChangeText={props.onChangeText}
+        // onChangeText={props.onChangeText}
         placeholder={props.placeholder}
         secureTextEntry={props.secureTextEntry}
         value={props.value}
+        underlineColorAndroid="transparent"
       />
     </View>
   );
@@ -36,10 +37,12 @@ const styles = StyleSheet.create({
     paddingRight: 5,
     paddingLeft: 5,
     paddingBottom: 2,
+    paddingHorizontal: 10,
     color: '#333',
     fontSize: 18,
     width: '100%',
-  }
+    backgroundColor: '#FFF',
+  },
 });
 
 export default Input;
