@@ -1,25 +1,31 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-import Home from './src/screens/containers/home';
-import Header from './src/sections/components/header';
-import { Button } from 'react-native-elements';
+import {Text} from 'react-native';
+import {Container, Item, Form, Input, Button, Label} from 'native-base';
+
 class App extends Component {
   render() {
-    return(
-      <Home>
-        <Header />
-        <Text>Hola</Text> 
-        <Button 
-        title='BUTTON' />
-      </Home>
+    return (
+      <Container>
+        <Form>
+          <Item floatingLabel>
+            <Label>Email</Label>
+            <Input autoCapitalize="none" autoCorrect={false} />
+          </Item>
+          <Item floatingLabel>
+            <Label>Password</Label>
+            <Input
+              secureTextEntry={true}
+              autoCapitalize="none"
+              autoCorrect={false}
+            />
+          </Item>
+          <Button full rounded success>
+            <Text>Login</Text>
+          </Button>
+        </Form>
+      </Container>
     );
   }
 }
-
-// const AppNavigator = createStackNavigaion({
-//     Home: App
-// });
-
-// const AppContainer = createAppContainer(AppNavigator);
 
 export default App;
